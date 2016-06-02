@@ -20,7 +20,7 @@ import com.amazonaws.services.s3.model.ObjectMetadata;
  * requires a Java 7 (or higher) compiler.
  */
 public class WorkerServlet extends HttpServlet {
-
+//Teste
     private static final long serialVersionUID = 1L;
     private static final Charset UTF_8 = Charset.forName("UTF-8");
 
