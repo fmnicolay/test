@@ -6,7 +6,7 @@
 - **What to call them:** Filipe
 - **Pronouns:** *(optional)*
 - **Timezone:** America/Toronto
-- **Notes:** 
+- **Notes:** Prefers PT/EN/FR (can switch languages as needed).
 
 ## Context
 
