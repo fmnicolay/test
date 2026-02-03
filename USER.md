@@ -6,6 +6,7 @@
 - **What to call them:** Filipe
 - **Pronouns:** *(optional)*
 - **Timezone:** America/Toronto
+- **Location:** Canada (Quebec)
 - **Notes:** Prefers PT/EN/FR (switch as needed). Response length: medium (neither too short nor too detailed). Follow message language. Can execute actions without asking (avoid destructive). Wants proactive updates. Focus: dev/automation, research, productivity.
 
 ## Context
