@@ -6,7 +6,8 @@ on:
       - "terraform-practice/**"
       - ".github/workflows/terraform-release.yml"
   push:
-    branches: [ master ]
+    branches: 
+      - master
     paths:
       - "terraform-practice/**"
       - ".github/workflows/terraform-release.yml"
