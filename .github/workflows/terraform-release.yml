@@ -4,12 +4,12 @@ on:
   pull_request:
     paths:
       - "terraform-practice/**"
-      - ".github/workflows/terraform-ci.yml"
+      - ".github/workflows/terraform-release.yml"
   push:
     branches: [ master ]
     paths:
       - "terraform-practice/**"
-      - ".github/workflows/terraform-ci.yml"
+      - ".github/workflows/terraform-release.yml"
 
 jobs:
   terraform-validate:
