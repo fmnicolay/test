@@ -24,6 +24,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.6
+
       - name: Configure AWS credentials (OIDC) [dev]
         uses: aws-actions/configure-aws-credentials@v4
         with:
@@ -68,6 +73,11 @@ jobs:
       contents: read
     steps:
       - uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.6
 
       - name: Configure AWS credentials (OIDC) [prod]
         uses: aws-actions/configure-aws-credentials@v4
