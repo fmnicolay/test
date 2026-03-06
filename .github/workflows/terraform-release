@@ -1,4 +1,4 @@
-name: terraform-ci
+name: terraform-release
 
 on:
   pull_request:
