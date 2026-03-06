@@ -50,7 +50,10 @@ jobs:
           terraform init -input=false -reconfigure
           terraform apply -auto-approve -input=false \
             -var-file=dev.tfvars \
-            -var "image=${{ steps.build.outputs.image_uri }}"
+            -var "image=${{ steps.build.outputs.image_uri }}" \
+            -var "tailscale_tailnet=${{ secrets.TAILSCALE_TAILNET }}" \
+            -var "tailscale_oauth_client_id=${{ secrets.TAILSCALE_OAUTH_CLIENT_ID }}" \
+            -var "tailscale_oauth_client_secret=${{ secrets.TAILSCALE_OAUTH_CLIENT_SECRET }}"
 
   deploy-prod:
     if: github.ref_name == 'master'
