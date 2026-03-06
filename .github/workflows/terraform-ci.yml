@@ -12,7 +12,7 @@ on:
       - ".github/workflows/terraform-ci.yml"
 
 jobs:
-  terraform:
+  terraform-validate:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -42,6 +42,28 @@ jobs:
 
       - name: Terraform validate
         run: terraform validate
+        
+  terraform-plan:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        env:
+          - dev
+          - prod
+
+    defaults:
+      run:
+        shell: bash
+        working-directory: terraform-practice/01-workspace-bootstrapper
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_version: 1.14.6
 
       - name: Terraform plan (${{ matrix.env }})
         run: terraform plan -input=false -no-color -var-file=environments/${{ matrix.env }}.tfvars
