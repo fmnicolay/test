@@ -7,17 +7,13 @@ terraform {
   }
 }
 
-resource "aws_ecr_repository" "this" {
-  name                 = var.name
-  image_tag_mutability = "MUTABLE"
+# ECR repository is created by the deploy workflow (to avoid first-run bootstrap issues).
+# Here we only look it up so Terraform can output the repo URL and depend on it.
 
-  image_scanning_configuration {
-    scan_on_push = true
-  }
-
-  tags = var.tags
+data "aws_ecr_repository" "this" {
+  name = var.name
 }
 
 output "repository_url" {
-  value = aws_ecr_repository.this.repository_url
+  value = data.aws_ecr_repository.this.repository_url
 }
