@@ -44,6 +44,7 @@ jobs:
         run: terraform validate
         
   terraform-plan:
+    needs: terraform-validate
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
