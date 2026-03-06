@@ -16,10 +16,6 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
-      matrix:
-        env:
-          - dev
-          - prod
 
     defaults:
       run:
