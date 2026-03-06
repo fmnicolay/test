@@ -24,7 +24,6 @@ module "network" {
 module "ecr" {
   source = "../../modules/ecr"
   name   = var.ecr_repo_name
-  tags   = local.tags
 }
 
 module "tailscale_router" {
